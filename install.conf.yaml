@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # Shell stuff
+    ~/.aliases: shell/.aliases
+    ~/.bashrc: 
+      force: true
+      path: bashrc
+    
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  

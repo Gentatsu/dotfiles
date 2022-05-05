@@ -1,0 +1,1 @@
+alias admin-local='env API_BACKEND=http://api.laka.local node server.js'
