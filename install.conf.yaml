@@ -10,9 +10,16 @@
     ~/.bashrc: 
       force: true
       path: bashrc
+    ~/.laka.sh:
+      path: lakakcodespaces
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash, Installing git autocomplete]
   - [source ~/.bashrc]
+  - 
+    command: |
+      if [ -f ~/.laka.sh ]; then
+        . ~/.laka.sh
+      fi
   
